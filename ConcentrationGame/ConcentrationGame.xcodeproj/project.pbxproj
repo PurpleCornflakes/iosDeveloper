@@ -12,6 +12,8 @@
 		EA60E83A20CBD1D0001F4946 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA60E83820CBD1D0001F4946 /* Main.storyboard */; };
 		EA60E83C20CBD1D1001F4946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA60E83B20CBD1D1001F4946 /* Assets.xcassets */; };
 		EA60E83F20CBD1D1001F4946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA60E83D20CBD1D1001F4946 /* LaunchScreen.storyboard */; };
+		EADCD0DC20CCE6A6001D5BBD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADCD0DB20CCE6A6001D5BBD /* Card.swift */; };
+		EADCD0DE20CCE6B4001D5BBD /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADCD0DD20CCE6B4001D5BBD /* Concentration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		EA60E83B20CBD1D1001F4946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA60E83E20CBD1D1001F4946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA60E84020CBD1D1001F4946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EADCD0DB20CCE6A6001D5BBD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		EADCD0DD20CCE6B4001D5BBD /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				EA60E83620CBD1D0001F4946 /* ViewController.swift */,
 				EA60E83820CBD1D0001F4946 /* Main.storyboard */,
 				EA60E84020CBD1D1001F4946 /* Info.plist */,
+				EADCD0DB20CCE6A6001D5BBD /* Card.swift */,
+				EADCD0DD20CCE6B4001D5BBD /* Concentration.swift */,
 			);
 			path = ConcentrationGame;
 			sourceTree = "<group>";
@@ -144,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA60E83720CBD1D0001F4946 /* ViewController.swift in Sources */,
+				EADCD0DE20CCE6B4001D5BBD /* Concentration.swift in Sources */,
+				EADCD0DC20CCE6A6001D5BBD /* Card.swift in Sources */,
 				EA60E83520CBD1D0001F4946 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
