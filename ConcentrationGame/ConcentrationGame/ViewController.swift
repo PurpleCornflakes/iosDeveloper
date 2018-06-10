@@ -19,13 +19,26 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    @IBOutlet weak var ScoreLabel: UILabel!
+    var score = 0{
+        didSet{
+            ScoreLabel.text = "Score:\(score)"
+        }
+    }
+    @IBAction func restartGame(_ sender: UIButton) {
+        flipCount = 0
+        score = 0
+        game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
+        emojiChoices = emojiChoicesOfThemes[game.theme]!
+    }
     
     @IBOutlet var cardButtons: [UIButton]!
+    
     @IBAction func touchCard(_ sender: UIButton) {
         flipCount += 1
         if let cardNumber = cardButtons.index(of: sender){
             game.chooseCard(at: cardNumber)
+            score = game.score
             updateViewFromModel()
         }else{
             print("Chosen card is not in cardButtons")
@@ -46,7 +59,15 @@ class ViewController: UIViewController {
         }
         
     }
-    var emojiChoices = ["🎃","👻","👩🏻‍🌾","🤓","😘"]
+
+    let emojiChoicesOfThemes = ["Fruits":["🍏","🍉","🍐","🍋","🍓","🍑","🍍","🥥"],
+                                "Dishes":["🍣","🥟","🥗","🍘","🍰","🍜","🌮","🍔"],
+                                "Sports":["⚽️","🏀","🏈","🏐","🎾","🏓","🎱","🏸"],
+                                "Faces" :["😀","😉","🤓","😋","😚","😱","🤪","😤"],
+                                "Halloween":["🎃","👻","😈","👿","👹","👺","🤡","💀"],
+                                "Animals":["🙈","🐷","🐶","🦄","🐟","🐮","🐼","🐰"]]
+    lazy var emojiChoices = emojiChoicesOfThemes[game.theme]!
+    
     var emoji = [Int: String]()
     func emoji(for card:Card)-> String{
         if emoji[card.identifier] == nil, emojiChoices.count > 0{
